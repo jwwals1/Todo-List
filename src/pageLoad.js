@@ -1,6 +1,6 @@
 import todoList from "./todoList";
 import homepage from "./homepage";
-import addTodos from "./addTodos";
+import addTodos from "./todosForm";
 
 function initialLoad() {
     // todoList();

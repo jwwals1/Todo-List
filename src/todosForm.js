@@ -17,6 +17,10 @@ const addTodos = () => {
     todoInput.type = 'text';
     addTodoForm.appendChild(todoInput);
 
+    const submitButton = document.createElement('button');
+    submitButton.innerHTML = 'Add Todo'
+    addTodoForm.appendChild(submitButton);
+
     addTodoContent.appendChild(addTodoForm);
     pageContent.appendChild(addTodoContent);
     content.appendChild(pageContent);
