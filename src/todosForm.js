@@ -55,15 +55,19 @@ const todoForm = () => {
     addTodoForm.appendChild(priorityInput);
     const blankOption = document.createElement('option');
     blankOption.innerText = '';
+    blankOption.value = ''
     priorityInput.appendChild(blankOption);
     const lowOption = document.createElement('option');
     lowOption.innerText = 'low';
+    lowOption.value = 'low'
     priorityInput.appendChild(lowOption);
     const mediumOption = document.createElement('option');
     mediumOption.innerText = 'medium';
+    mediumOption.value = 'medium'
     priorityInput.appendChild(mediumOption);
     const highOption = document.createElement('option');
     highOption.innerText = 'high';
+    highOption.value = 'high';
     priorityInput.appendChild(highOption);
 
     const submitButton = document.createElement('button');
