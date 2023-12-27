@@ -1,7 +1,10 @@
-const createTodo = (title, description, dueDate, priority) => {
-    return {
-        title, description, dueDate, priority
+export class Todo {
+    constructor(title, description, dueDate, priority) {
+        this.title = title;
+        this.description = description;
+        this.dueDate = dueDate;
+        this.priority = priority;
     }
 }
 
-export default createTodo
+
