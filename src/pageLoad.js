@@ -1,14 +1,10 @@
 import homepage from "./homepage";
-import addTodos from "./todosForm";
-import createTodo from "./createTodos";
-// import todoList from "./createTodos"
+import todoForm from "./todosForm";
 
 
 function initialLoad() {
     homepage();
-    addTodos();
-    createTodo();
-    // todoList();
+    todoForm();
 }
 
 export default initialLoad;
