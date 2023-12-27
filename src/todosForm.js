@@ -1,4 +1,4 @@
-import createTodo from "./createTodos";
+import createTodo from './createTodos'
 
 const todoForm = () => {
     const content = document.querySelector('#content');
@@ -72,7 +72,7 @@ const todoForm = () => {
 
     const submitButton = document.createElement('button');
     submitButton.type = 'button';
-    submitButton.addEventListener('click', createTodo)
+    submitButton.addEventListener('click', createTodo);
     submitButton.innerHTML = 'Add Todo';
     addTodoForm.appendChild(submitButton);
 
