@@ -1,4 +1,6 @@
-const addTodos = () => {
+import createTodo from "./createTodos";
+
+const todoForm = () => {
     const content = document.querySelector('#content');
     const pageContent = document.createElement('div');
     pageContent.classList.add('pageContent');
@@ -6,18 +8,20 @@ const addTodos = () => {
     const addTodoContent = document.createElement('div');
     addTodoContent.setAttribute('id', 'addTodoContent');
 
-    const addTodoForm = document.createElement('form');
-    addTodoForm.classList.add('addTodoForm');
-
     const pageTitle = document.createElement('h1');
     pageTitle.textContent = 'Add Todo';
     pageContent.appendChild(pageTitle);
+
+    const addTodoForm = document.createElement('form');
+    addTodoForm.setAttribute('id', 'addTodoForm');
+    addTodoForm.classList.add('addTodoForm');
 
     const todoTitle = document.createElement('h2');
     todoTitle.textContent = 'Enter the title of your todo.';
     addTodoForm.appendChild(todoTitle)
 
     const todoTitleInput = document.createElement('input');
+    todoTitleInput.setAttribute('id', 'todoTitleInput');
     todoTitleInput.type = 'text';
     todoTitleInput.placeholder = 'Todo Title'
     addTodoForm.appendChild(todoTitleInput);
@@ -27,6 +31,7 @@ const addTodos = () => {
     addTodoForm.appendChild(todoDescription);
 
     const todoDescriptionInput = document.createElement('input');
+    todoDescriptionInput.setAttribute('id', 'todoDescriptionInput');
     todoDescriptionInput.type = 'text';
     todoDescriptionInput.placeholder = 'Todo Description';
     addTodoForm.appendChild(todoDescriptionInput);
@@ -36,6 +41,7 @@ const addTodos = () => {
     addTodoForm.appendChild(dueDateTitle);
 
     const dueDateInput = document.createElement('input');
+    dueDateInput.setAttribute('id', 'dueDateInput');
     dueDateInput.type = 'text';
     dueDateInput.placeholder = 'Due Date'
     addTodoForm.appendChild(dueDateInput);
@@ -45,6 +51,7 @@ const addTodos = () => {
     addTodoForm.appendChild(priorityTitle);
 
     const priorityInput = document.createElement('select');
+    priorityInput.setAttribute('id', 'priorityInput');
     addTodoForm.appendChild(priorityInput);
     const blankOption = document.createElement('option');
     blankOption.innerText = '';
@@ -60,6 +67,7 @@ const addTodos = () => {
     priorityInput.appendChild(highOption);
 
     const submitButton = document.createElement('button');
+    submitButton.addEventListener('click', createTodo)
     submitButton.innerHTML = 'Add Todo';
     addTodoForm.appendChild(submitButton);
 
@@ -68,4 +76,4 @@ const addTodos = () => {
     content.appendChild(pageContent);
 }
 
-export default addTodos
+export default todoForm
