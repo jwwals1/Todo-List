@@ -26,7 +26,7 @@ function todoList() {
     for (let i = 0; i < myTodos.length; i++) {
         let todo = myTodos[i];
         let todoElement = document.createElement('div');
-        todoElement.innerHTML = `${todo.title} ${todo.description} ${todo.dueDate} ${todo.priority} Completed?`;
+        todoElement.innerHTML = `${todo.title} ${todo.description} ${todo.dueDate} ${todo.priority} Completed? <input type="checkbox" id="completed" value="completed">`;
         todos.appendChild(todoElement);
     }
 }
