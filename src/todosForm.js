@@ -67,6 +67,7 @@ const todoForm = () => {
     priorityInput.appendChild(highOption);
 
     const submitButton = document.createElement('button');
+    submitButton.type = 'button';
     submitButton.addEventListener('click', createTodo)
     submitButton.innerHTML = 'Add Todo';
     addTodoForm.appendChild(submitButton);
