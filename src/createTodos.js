@@ -10,7 +10,7 @@ function createTodo() {
     let priority = document.querySelector('#priorityInput').value;
 
     let createNewTodo = new Todo(title, description, dueDate, priority)
-    if (title.length == 0 || description.length == 0 || dueDate.length == 0) {
+    if (title.length == 0 || description.length == 0 || dueDate.length == 0 || priority.length == '') {
         alert('All values must be filled out');
         return
     }
@@ -22,11 +22,14 @@ function createTodo() {
 
 function todoList() {
     const todos = document.getElementById('todos')
+
     todos.innerHTML = ""
     for (let i = 0; i < myTodos.length; i++) {
         let todo = myTodos[i];
         let todoElement = document.createElement('div');
-        todoElement.innerHTML = `${todo.title} ${todo.description} ${todo.dueDate} ${todo.priority} Completed? <input type="checkbox" id="completed" value="completed">`;
+        todoElement.innerHTML = `<div>${todo.title}</div> <div>${todo.description}</div> 
+            <div>${todo.dueDate}</div> ${todo.priority} <div><input type="checkbox"
+            id="completed" value="completed"></div> `;
         todos.appendChild(todoElement);
     }
 }
