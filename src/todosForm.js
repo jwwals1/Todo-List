@@ -2,13 +2,14 @@ import createTodo from './createTodos'
 
 const todoForm = () => {
     const content = document.querySelector('#content');
-    const pageContent = document.createElement('div');
+    const pageContent = document.getElementById('pageContent');
     pageContent.classList.add('pageContent');
 
     const addTodoContent = document.createElement('div');
     addTodoContent.setAttribute('id', 'addTodoContent');
 
-    const pageTitle = document.createElement('h1');
+    const pageTitle = document.createElement('h2');
+    pageTitle.setAttribute('id', 'pageTitle');
     pageTitle.textContent = 'Add Todo';
     pageContent.appendChild(pageTitle);
 
@@ -58,21 +59,22 @@ const todoForm = () => {
     blankOption.value = ''
     priorityInput.appendChild(blankOption);
     const lowOption = document.createElement('option');
-    lowOption.innerText = 'low';
-    lowOption.value = 'low'
+    lowOption.innerText = 'Low';
+    lowOption.value = 'Low'
     priorityInput.appendChild(lowOption);
     const mediumOption = document.createElement('option');
-    mediumOption.innerText = 'medium';
-    mediumOption.value = 'medium'
+    mediumOption.innerText = 'Medium';
+    mediumOption.value = 'Medium'
     priorityInput.appendChild(mediumOption);
     const highOption = document.createElement('option');
-    highOption.innerText = 'high';
-    highOption.value = 'high';
+    highOption.innerText = 'High';
+    highOption.value = 'High';
     priorityInput.appendChild(highOption);
 
     const submitButton = document.createElement('button');
     submitButton.type = 'button';
     submitButton.addEventListener('click', createTodo);
+    submitButton.setAttribute('id', 'submitButton')
     submitButton.innerHTML = 'Add Todo';
     addTodoForm.appendChild(submitButton);
 
