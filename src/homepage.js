@@ -30,6 +30,7 @@ const homepage = () => {
     pageContent.appendChild(todos);
 
     const title = document.createElement('h1');
+    title.setAttribute('id', 'header')
     title.textContent = 'Todo App';
     content.appendChild(title)
 
