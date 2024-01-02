@@ -17,6 +17,7 @@ function createTodo() {
     myTodos.push(createNewTodo)
     todoList();
     clearInput();
+    alert('Todo Succussfully Added')
 
 }
 
@@ -27,9 +28,10 @@ function todoList() {
     for (let i = 0; i < myTodos.length; i++) {
         let todo = myTodos[i];
         let todoElement = document.createElement('div');
+        todoElement.setAttribute('id', 'todoElement')
         todoElement.innerHTML = `<div>${todo.title}</div> <div>${todo.description}</div> 
             <div>${todo.dueDate}</div> ${todo.priority} <div><input type="checkbox"
-            id="completed" value="completed"></div> `;
+            id="completed" value="completed"></div>`;
         todos.appendChild(todoElement);
     }
 }
