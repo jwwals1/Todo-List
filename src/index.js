@@ -1,3 +1,3 @@
-import loadPage from './pageLoad'
+import initialLoad from './pageLoad'
 
-loadPage();
+initialLoad(); 
