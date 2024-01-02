@@ -27,7 +27,6 @@ body {
     font-size: 40px;
     grid-area: 1;
     margin: 0;
-    /* background-color: lightgray; */
 }
 
 #addTodoContent {
@@ -62,12 +61,12 @@ body {
 }
 
 #addTodoForm>input {
-    width: 200px;
+    width: 80%;
 }
 
 
 #priorityInput {
-    width: 200px;
+    width: 80%;
     display: block;
     clear: both;
 }
@@ -96,9 +95,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
     margin-left: 20px;
-    /* margin-right: 20px; */
     padding-left: 10px;
-    /* padding-right: 10px; */
     margin-bottom: 20px;
     border-top: 0px;
     border-left: 0px;
